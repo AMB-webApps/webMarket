@@ -32,3 +32,4 @@ class Product(models.Model):
     model = models.CharField(max_length=200)
     price = models.CharField(max_length=200)
     image = models.ImageField(many=True)
+
