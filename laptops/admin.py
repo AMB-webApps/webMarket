@@ -5,7 +5,8 @@ from .models import Product
 
 @admin.register(Product)
 class ProductAdmin(admin.ModelAdmin):
-    list_display = [
+    list_display = (
+        'id',
         'brand',
         'name',
         'display',
@@ -17,6 +18,6 @@ class ProductAdmin(admin.ModelAdmin):
         'model',
         'price',
         'image',
-    ]
-    list_display_links = ['id', ]
-    search_fields = ['brand', 'name', 'uses']
+    )
+    list_display_links = ('id', 'name')
+    search_fields = ('brand', 'name', 'uses')
