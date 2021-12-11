@@ -19,4 +19,3 @@ class ProductSerializer(serializers.ModelSerializer):
     #     product = request.product
     #     serializer = ProductSerializer(instance=product, context={'request': request})
     #     return Response(data=serializer.data, status=status.HTTP_200_OK)
-
