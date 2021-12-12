@@ -1,4 +1,13 @@
-from django.shortcuts import render
+from .models import Bags
+from rest_framework import generics
+from .serializers import BagSerializer
 
-# Create your views here.
-#qalesla endi
+
+class Baglist(generics.ListCreateAPIView):
+    queryset = Bags.objects.all()
+    serializer_class = BagSerializer
+
+
+class BagDetail(generics.RetrieveUpdateDestroyAPIView):
+    queryset = Bags.objects.all()
+    serializer_class = BagSerializer

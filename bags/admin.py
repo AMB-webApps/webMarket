@@ -1,3 +1,15 @@
 from django.contrib import admin
+from .models import Bags
 
-# Register your models here.
+
+class BagsAdmin(admin.ModelAdmin):
+    list_display = (
+        'id',
+        'image',
+        'color',
+        'material',
+        'price',
+    )
+
+
+admin.site.register(Bags, BagsAdmin)

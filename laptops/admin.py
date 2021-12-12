@@ -22,7 +22,7 @@ class ProductAdmin(admin.ModelAdmin):
         'price',
         'image',
     )
-    exclude = ('display',
+    include = ('display',
                'cpu',
                'memory',
                'ssd_hdd',
