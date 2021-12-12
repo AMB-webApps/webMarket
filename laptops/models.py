@@ -52,8 +52,7 @@ class Product(models.Model):
     image = models.ImageField(upload_to='product/%Y/%m/%d', blank=True)
 
     def __str__(self):
-        return f'{self.brand}, {self.name}, {self.display}, {self.cpu}, {self.memory}, {self.ssd_hdd}, ' \
-               f'{self.graphic_card}, {self.uses}, {self.model}, {self.price}, {self.image}'
+        return f'{self.brand}, {self.name}, {self.uses}, {self.price}, {self.image}'
 
     class Meta:
         verbose_name = 'Product'
