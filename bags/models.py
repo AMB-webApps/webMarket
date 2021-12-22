@@ -11,7 +11,7 @@ class Bags(models.Model):
         (6, 'Green'),
         (7, 'Silver'),
     )
-    image = models.ImageField(upload_to='bags/%Y/%m/%d')
+    image = models.ImageField(upload_to='bags/', blank=True, null=True)
     color = models.IntegerField(choices=COLOR_CHOICE)
     material = models.CharField(max_length=200)
     price = models.CharField(max_length=100)
